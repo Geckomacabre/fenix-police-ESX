@@ -1,4 +1,4 @@
-# Fenix Police Response 1.0.2
+# Fenix Police Response 1.0.2 with ESX support
 
 This mod enables AI police dispatch/wanted levels and replaces the base GTA V police dispatch system with something less punishing and more realistic. It is highly configurable and all configuration and code is thoroughly commented
 to facilitate end-user modification. You could configure this to be even more brutal than base-game if you wanted, or even easier. The idea was to have AI police for a small RP server just for your friends where having a bunch of player police was not possible. 
@@ -23,10 +23,11 @@ to facilitate end-user modification. You could configure this to be even more br
 - Police are spawned serverside, then their networkIDs are sent back to the client that requested police so they can be controlled and maintained. They should not migrate to other clients, and the distance culling is high so they can still be controlled from far away. This means units will be properly sycned across clients and you will see police chasing other players. 
 - Stolen police vehicles will not de-spawn if occupied by a player at the time the script tries to clean them up (due to peds being dead, peds being far away, or losing wanted stars). So they wont disappear if you manage to steal one mid chase. However, they will never despawn if this happens. I plan to add logic that removes them once the player abandons them for a certain time/distance in the future. 
 - Players with police jobs can be protected from becoming wanted, option to apply this protection only when on-duty. 
+- Added ESX support from Geckomacabre
 
 **REQUIREMENTS:**
 
-This mod requires QBCore for: Notifications, counting players with Police jobs online, checking near vehicles (because the native function for this was giving me trouble), and checking if isDying or inLastStand and cancelling wanted levels. 
+This mod requires ESX or QBCore for: Notifications, counting players with Police jobs online, checking near vehicles (because the native function for this was giving me trouble), and checking if isDying or inLastStand and cancelling wanted levels. 
 In theory, it could be removed if you switch the near vehicle check to the native and remove notifications and last stand logic.
 
 
